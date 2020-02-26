@@ -43,7 +43,7 @@ Module.register("MMM-HTMLSnippet",{
 		wrapper.style.overflow = "hidden"
 		wrapper.style.backgroundColor = self.config.backgroundColor
 		wrapper.scrolling = "no"
-		wrapper.src = '/html'
+		wrapper.src = '/MMM-HTMLSnippet'
 
 		return wrapper
 	},

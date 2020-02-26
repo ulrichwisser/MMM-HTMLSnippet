@@ -18,7 +18,7 @@ module.exports = NodeHelper.create({
 	webserver: function() {
 		this.expressApp.use(bodyParser.json())
 		this.expressApp.use(bodyParser.urlencoded({extended: true}))
-		this.expressApp.get("/html", (req, res) => {
+		this.expressApp.get("/MMM-HTMLSnippet", (req, res) => {
 			res.status(200).send(this.config.html)
     	})
 	}
