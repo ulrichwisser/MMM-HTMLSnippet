@@ -12,6 +12,9 @@ Module.register("MMM-HTMLSnippet",{
 	start: function() {
 		let self = this;
 
+		// send config to node helper
+		this.sendSocketNotification("INIT", this.config)
+
 		// Schedule update timer.
 		this.scheduleUpdate(2000);
 	},
@@ -30,7 +33,7 @@ Module.register("MMM-HTMLSnippet",{
 
 	getDom: function() {
 		let self = this
-		var wrapper = document.createElement("div")
+		var wrapper = document.createElement("iframe")
 		wrapper.id = "HTMLSNIPPET"
 		wrapper.className = "htmlsnippet module"
 		wrapper.style.width = self.config.width
@@ -40,7 +43,7 @@ Module.register("MMM-HTMLSnippet",{
 		wrapper.style.overflow = "hidden"
 		wrapper.style.backgroundColor = self.config.backgroundColor
 		wrapper.scrolling = "no"
-		wrapper.innerHTML = self.config.html
+		wrapper.src = '/html'
 
 		return wrapper
 	},
