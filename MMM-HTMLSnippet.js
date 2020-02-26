@@ -43,19 +43,19 @@ Module.register("MMM-HTMLSnippet",{
     },
 
     getDom: function() {
-        var iFrame = document.createElement("iframe")
-        iFrame.id = "HTMLSNIPPET"
-        iFrame.className = "htmlsnippet module"
-        iFrame.style.width = this.config.width
-        iFrame.style.height = this.config.height
-        iFrame.style.border = "none"
-        iFrame.style.display = "block"
-        iFrame.style.overflow = "hidden"
-        iFrame.style.backgroundColor = this.config.backgroundColor
-        iFrame.scrolling = "no"
-        iFrame.src = this.config.html
+        var wrapper = document.createElement("div")
+        wrapper.id = "HTMLSNIPPET"
+        wrapper.className = "htmlsnippet module"
+        wrapper.style.width = this.config.width
+        wrapper.style.height = this.config.height
+        wrapper.style.border = "none"
+        wrapper.style.display = "block"
+        wrapper.style.overflow = "hidden"
+        wrapper.style.backgroundColor = this.config.backgroundColor
+        wrapper.scrolling = "no"
+        wrapper.innerHTML = this.config.html
 
-        return iframe
+        return wrapper
     },
 
     suspend: function() {
