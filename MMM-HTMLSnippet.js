@@ -21,16 +21,8 @@ Module.register("MMM-HTMLSnippet",{
     start: function() {
         let self = this;
 
-        //Flag for check if module is loaded
-        this.loaded = false;
-        this.sendConfig();
-        this.getData();
-
         // Schedule update timer.
         this.scheduleUpdate(2000);
-
-        // send init message
-        this.sendSocketNotification("INIT", this.config)
     },
 
 	scheduleUpdate: function(delay) {
