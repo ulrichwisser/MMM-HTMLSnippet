@@ -1,12 +1,12 @@
 # MMM-HTMLSnippet
 MagicMirror module for external web widgets
 
-This module loads a HTML snippet in an iFrame. The iframe will be positioned
-as any other module would. (In the order of the configuration)
-Optionally the content can be reloaded periodically.
+- This module loads a HTML snippet in an iFrame. 
+- The iframe will be positioned as any other module would. (In the order of the configuration)
+- Optionally the content can be reloaded periodically.
 
 ## Screenshot
-![Screenshot](https://raw.githubusercontent.com/eouia/MMM-HTMLSnippet/master/screenshot.png)
+![Screenshot](https://github.com/ulrichwisser/MMM-HTMLSnippet/blob/master/HTMLsnippet-screenshot-weather1.png?raw=true)
 
 ## Installation
 ```shell
@@ -22,8 +22,8 @@ git clone https://github.com/ulrichwisser/MMM-HTMLSnippet
   position: "top_left",
   config: {
         html:``, //insert your script or html codes here.
-        width: "800px",
-        height: "400px",
+        width: "600px",
+        height: "300px",
         backgroundColor: "#FFF",
         updateInterval: 3600000,
       },
@@ -37,7 +37,8 @@ git clone https://github.com/ulrichwisser/MMM-HTMLSnippet
     module: "MMM-HTMLSnippet",
     position: "top_left",
         config: {
-        html:`<div id='wrapper-ddnh'><span id='h2-ddnh'><a id='url-ddnh' href="//www.vackertvader.se/täby-erikslund"></a></span><div id='load-ddnh'></div><a id='url_detail-ddnh' href="//www.vackertvader.se/täby-erikslund"></a></div><script type="text/javascript" src="//widget.vackertvader.se/widgetv3/widget_request/90247681779?bgcolor=000000&border=none&days=5&key=-ddnh&lang=&maxtemp=yes&size=x120&textcolor=ffffff&unit=C&wind=yes" charset="utf-8"></script>`,
+        html:`<div id='wrapper-ELec'><span id='h2-ELec'><a id='url-ELec' href="//www.vackertvader.se/täby-erikslund">Vädret i Erikslund</a></span><div id='load-ELec'></div><a id='url_detail-ELec' href="//www.vackertvader.se/täby-erikslund">Detaljerad väderprognos</a></div><script type="text/javascript" src="//widget.vackertvader.se/widgetv3/widget_request/90247681779?bgcolor=000000&border=none&days=5&key=-ELec&lang=&maxtemp=yes&size=x120&textcolor=ffffff&unit=C&wind=yes" charset="utf-8"></script>
+`,
         width: "600px",
         height: "100px",
         backgroundColor: "#000",
@@ -46,3 +47,5 @@ git clone https://github.com/ulrichwisser/MMM-HTMLSnippet
 },
 
 ```
+
+Note: The weather widget in the example is taken from https://www.vackertvader.se/. Please refer to their homepage for License and copyright information. At the time of my publishing it said it was free to use whereever you want.
