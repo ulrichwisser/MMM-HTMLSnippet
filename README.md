@@ -1,7 +1,7 @@
 # MMM-HTMLSnippet
 MagicMirror module for external web widgets
 
-- This module loads a HTML snippet in an iFrame. 
+- This module loads a HTML snippet in an iFrame. (The iframe is needed to make script tags work.)
 - The iframe will be positioned as any other module would. (In the order of the configuration)
 - Optionally the content can be reloaded periodically.
 
