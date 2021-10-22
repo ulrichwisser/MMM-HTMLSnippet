@@ -21,30 +21,29 @@ git clone https://github.com/ulrichwisser/MMM-HTMLSnippet
   module: "MMM-HTMLSnippet",
   position: "top_left",
   config: {
-        html:``, //insert your script or html codes here.
-        width: "600px",
-        height: "300px",
-        backgroundColor: "#FFF",
-        updateInterval: 3600000,
-      },
-  },
+    html:``, //insert your script or html codes here.
+    width: "600px",
+    height: "300px",
+    backgroundColor: "#FFF",
+    updateInterval: 3600000,
+  }
 }
 ```
 
 ### Example
 ```javascript
 {
-    module: "MMM-HTMLSnippet",
-    position: "top_left",
-        config: {
-        html:`<div id='wrapper-ELec'><span id='h2-ELec'><a id='url-ELec' href="//www.vackertvader.se/täby-erikslund">Vädret i Erikslund</a></span><div id='load-ELec'></div><a id='url_detail-ELec' href="//www.vackertvader.se/täby-erikslund">Detaljerad väderprognos</a></div><script type="text/javascript" src="//widget.vackertvader.se/widgetv3/widget_request/90247681779?bgcolor=000000&border=none&days=5&key=-ELec&lang=&maxtemp=yes&size=x120&textcolor=ffffff&unit=C&wind=yes" charset="utf-8"></script>
+  module: "MMM-HTMLSnippet",
+  position: "top_left",
+  config: {
+    html:`<div id='wrapper-ELec'><span id='h2-ELec'><a id='url-ELec' href="//www.vackertvader.se/täby-erikslund">Vädret i Erikslund</a></span><div id='load-ELec'></div><a id='url_detail-ELec' href="//www.vackertvader.se/täby-erikslund">Detaljerad väderprognos</a></div><script type="text/javascript" src="//widget.vackertvader.se/widgetv3/widget_request/90247681779?bgcolor=000000&border=none&days=5&key=-ELec&lang=&maxtemp=yes&size=x120&textcolor=ffffff&unit=C&wind=yes" charset="utf-8"></script>
 `,
-        width: "600px",
-        height: "100px",
-        backgroundColor: "#000",
-        updateInterval: 3600000, // in milli seconds
-    },
-},
+    width: "600px",
+    height: "100px",
+    backgroundColor: "#000",
+    updateInterval: 3600000, // in milli seconds
+  }
+}
 
 ```
 
