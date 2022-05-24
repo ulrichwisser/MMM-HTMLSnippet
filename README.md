@@ -4,6 +4,9 @@ MagicMirror module for external web widgets
 - This module loads a HTML snippet in an iFrame. (The iframe is needed to make script tags work.)
 - The iframe will be positioned as any other module would. (In the order of the configuration)
 - Optionally the content can be reloaded periodically.
+- if you have several instances of the module each one needs a unique indent
+- to be save use only a-z and 0-9 in your ident
+- color might does not have the desired effect as the iframe loads it's own DOM with it's own style
 
 ## Screenshot
 ![Screenshot](https://github.com/ulrichwisser/MMM-HTMLSnippet/blob/master/HTMLsnippet-screenshot-weather1.png?raw=true)
@@ -25,7 +28,9 @@ git clone https://github.com/ulrichwisser/MMM-HTMLSnippet
     width: "600px",
     height: "300px",
     backgroundColor: "#FFF",
+    color: "#000#,
     updateInterval: 3600000,
+    ident: "identifier",
   }
 }
 ```
@@ -41,7 +46,9 @@ git clone https://github.com/ulrichwisser/MMM-HTMLSnippet
     width: "600px",
     height: "100px",
     backgroundColor: "#000",
+    color: "#FFF",
     updateInterval: 3600000, // in milli seconds
+    ident: "snippet1",
   }
 }
 
