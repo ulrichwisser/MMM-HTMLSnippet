@@ -25,6 +25,9 @@ Module.register("MMM-HTMLSnippet",{
 		if (typeof delay !== "undefined" && delay >= 0) {
 			nextLoad = delay;
 		}
+		if (nextLoad == 0) {
+			return;
+		}
 		setTimeout(function() {
 			self.updateDom();
 			self.scheduleUpdate();
