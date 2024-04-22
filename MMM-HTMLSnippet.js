@@ -12,6 +12,7 @@ Module.register("MMM-HTMLSnippet", {
     },
 
     scheduleUpdate: function(delay) {
+        let self = this;
         let nextLoad = this.config.updateInterval;
         if (typeof delay !== "undefined" && delay >= 0) {
             nextLoad = delay;
@@ -20,8 +21,8 @@ Module.register("MMM-HTMLSnippet", {
             return;
         }
         setTimeout(function() {
-            this.updateDom();
-            this.scheduleUpdate();
+            self.updateDom();
+            self.scheduleUpdate();
         }, nextLoad);
     },
 
