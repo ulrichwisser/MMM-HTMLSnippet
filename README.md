@@ -22,6 +22,9 @@ git clone https://github.com/ulrichwisser/MMM-HTMLSnippet
 ```
 
 ## Configuration
+
+Every instance of the module need to have a unique "ident" set.
+
 ### Format
 ```javascript
 {
@@ -65,9 +68,9 @@ git clone https://github.com/ulrichwisser/MMM-HTMLSnippet
 ```
 
 
-### Grafan example
+### Grafana example
 
-![Screenshot](https://github.com/ulrichwisser/MMM-HTMLSnippet/blob/master/HTMLsnippet-screenshot-grafana.png?raw=true)
+![Screenshot](https://github.com/ulrichwisser/MMM-HTMLSnippet/blob/master/HTMLSnippet-screenshot-grafana.png?raw=true)
 
 ```javascript
 {
