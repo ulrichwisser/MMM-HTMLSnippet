@@ -71,7 +71,12 @@ Module.register("MMM-HTMLSnippet", {
         var doms = document.getElementsByClassName("htmlsnippet")
         if (doms.length > 0) {
             for (let dom of doms) {
-                dom.style.display = "none"
+                if (this.config.suspendPage) {
+                    dom.style.display = "none"
+                } 
+                else {
+                    dom.style.visibility = "hidden"
+                }
             }
         }
     },
@@ -80,7 +85,12 @@ Module.register("MMM-HTMLSnippet", {
         var doms = document.getElementsByClassName("htmlsnippet")
         if (doms.length > 0) {
             for (let dom of doms) {
-                dom.style.display = "block"
+                if (this.config.suspendPage) {
+                    dom.style.display = "block"
+                } 
+                else {
+                    dom.style.visibility = "visible"
+                }
             }
         }
     },
