@@ -25,6 +25,8 @@ git clone https://github.com/ulrichwisser/MMM-HTMLSnippet
 
 Every instance of the module need to have a unique "ident" set.
 
+`suspendPage` changes the behaviour of hiding or showing the snippet. If `true`, the page will be set to `display=none`, unloading the page causing a reload on resume. If set to `false`, it will alter the visible flag, leaving the page loaded. This can be helpful for slow loading pages.
+
 ### Format
 ```javascript
 {
@@ -37,6 +39,7 @@ Every instance of the module need to have a unique "ident" set.
     color: "#000#,
     updateInterval: 3600000,
     ident: "identifier",
+    suspendPage: true,
     frames: [
       { html:``}, // insert your script or html codes here.
       { src: ``}, // insert url here
@@ -57,6 +60,7 @@ Every instance of the module need to have a unique "ident" set.
     color: "#FFF",
     updateInterval: 3600000, // in milli seconds
     ident: "snippet1",
+    suspendPage: false,
     frames: [
       {
         html:`<div id='wrapper-ELec'><span id='h2-ELec'><a id='url-ELec' href="//www.vackertvader.se/täby-erikslund">Vädret i Erikslund</a></span><div id='load-ELec'></div><a id='url_detail-ELec' href="//www.vackertvader.se/täby-erikslund">Detaljerad väderprognos</a></div><script type="text/javascript" src="//widget.vackertvader.se/widgetv3/widget_request/90247681779?bgcolor=000000&border=none&days=5&key=-ELec&lang=&maxtemp=yes&size=x120&textcolor=ffffff&unit=C&wind=yes" charset="utf-8"></script>`,
@@ -83,6 +87,7 @@ Every instance of the module need to have a unique "ident" set.
     color : "#FFF",
     updateInterval: 3600000, // in milli seconds
     ident: "random2",
+    suspendPage: false,
     frames : [
       { src: 'http://127.0.0.1:3000/d-solo/D0UaMxyWz/screen1?orgId=1&panelId=17' },
       { src: 'http://127.0.0.1:3000/d-solo/D0UaMxyWz/screen1?orgId=1&panelId=20'},
